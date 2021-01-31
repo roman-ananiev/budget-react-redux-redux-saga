@@ -1,12 +1,13 @@
 import React from 'react';
 import {Button, Form} from "semantic-ui-react";
 
-function ButtonSaveOrCancel(props) {
+function ButtonSaveOrCancel({addEntry, description, value, isExpense}) {
+
     return (
         <Button.Group style={{marginTop: 20}}>
-            <Button>Cabcel</Button>
+            <Button>Cancel</Button>
             <Button.Or/>
-            <Button primary>Add</Button>
+            <Button primary onClick={()=>addEntry()}>Add</Button>
         </Button.Group>
     );
 }
